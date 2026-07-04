@@ -6,9 +6,16 @@
 
 int main(){
     int highScores[] = {850, 745, 1220, 990};  // High scores in various game stages
-    int* scorePtr = highScores;   // Pointer initialized to the address of the array
+    int* scorePtr = &highScores[0];   // Pointer initialized to the address of the array
 
+    // this highlights that the behaviour of pointers and arrays are quite similar
+    // i can point to the first element of an array and then use that pointer to access
+    // other parts of the array
     std::cout << "Initial high score: " << *scorePtr << std::endl;  // Display the first high score using pointer
+
+    std::cout << "Second high score: " << *(scorePtr + 1) << std::endl;  // Display the second high score using pointer
+
+    std::cout << "Second high score: " << scorePtr[2] << std::endl;  // Display the third high score using pointer
 
     std::cout << std::endl << std::endl;
     return 0;
