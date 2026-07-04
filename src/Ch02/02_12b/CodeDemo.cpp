@@ -6,13 +6,13 @@
 #include <typeinfo>
 
 int main(){
-    auto score;
-    auto points;
-    auto height;
-    auto duration;
-    auto is_active;
-    auto initial;
-    auto title;
+    auto score = 8; // int
+    auto points = 99999888877777; // long
+    auto height = 6.2f; // float
+    auto duration = 90.0; // double
+    auto is_active = true; // bool
+    auto initial = 'p'; // char
+    auto title = "soccer champion"; // string
 
     std::cout << "The type of score is " << typeid(score).name() << std::endl;
     std::cout << "The type of points is " << typeid(points).name() << std::endl;
