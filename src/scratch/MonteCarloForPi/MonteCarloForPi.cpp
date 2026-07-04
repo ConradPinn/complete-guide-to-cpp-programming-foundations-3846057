@@ -20,7 +20,7 @@ int main(){
         float rand_x = (((float)rand() / RAND_MAX) * circle_diam) - circle_radius;
         float rand_y = (((float)rand() / RAND_MAX) * circle_diam) - circle_radius;
 
-        float hypotenuse = sqrt(
+        float hypotenuse = std::sqrt(
             (rand_x * rand_x) + (rand_y * rand_y)
         );
 
