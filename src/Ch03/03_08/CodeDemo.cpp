@@ -8,7 +8,11 @@
 double my_average(int a, int8_t b, uint32_t c){
     double result = 0.0;
 
-    // Write your code here
+    double inputs[3] = {(double) a, (double) b, (double) c};
+    for (int i = 0; i < 3; i++) {
+        result += inputs[i];
+    }
+    result /= 3;
     
     return result;
 }
