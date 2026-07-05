@@ -10,8 +10,10 @@ int main(){
     float average;
 
     average = 0.0f;
-    for (int i = 0; i < lapTimes.size(); i++)
-        average += lapTimes[i];
+    // this is a ranged for loop and is equivalent to a python for loop
+    // in python the syntax would be `for x in lapTimes`
+    for (int x : lapTimes)
+        average += x;
     average /= lapTimes.size();
     std::cout << "Average Lap Time: " << average << std::endl;
 
