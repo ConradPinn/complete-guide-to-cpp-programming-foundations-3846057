@@ -15,7 +15,23 @@ struct Resource{
 double CalculateTotalCost(std::vector<Resource> resources){
     double result = 0.0;
     
-    // Write your code here
+    for (int i = 0; i < resources.size(); i++) {
+
+        float tax_rate;
+        switch (resources[i].type) {
+            case 'B':
+                tax_rate = 1.05;
+                break;
+            case 'L':
+                tax_rate = 1.15;
+                break;
+            case 'E':
+                tax_rate = 1.0;
+                break;
+        }
+
+        result += (resources[i].baseCost * tax_rate);
+    }
     
     return result;
 }
