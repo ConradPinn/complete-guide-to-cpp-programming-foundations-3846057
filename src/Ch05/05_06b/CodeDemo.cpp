@@ -7,7 +7,14 @@
 
 int main(){
     std::vector<int> lapTimes = {92, 85, 88, 90, 87};
-    float average;
+    float average = 0.0;
+
+    for (int i = 0; i < lapTimes.size(); i++) {
+        average += lapTimes[i];
+    }
+    average /= lapTimes.size();
+
+    std::cout << average << std::endl;
     
     std::cout << std::endl << std::endl;
     return 0;
